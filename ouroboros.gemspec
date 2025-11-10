@@ -5,7 +5,7 @@ require_relative "lib/ouroboros/version"
 Gem::Specification.new do |spec|
   spec.name = "ouroboros"
   spec.version = Ouroboros::VERSION
-  spec.authors = ["Rob Lacey"]
+  spec.authors = ["RobL"]
   spec.email = ["contact@robl.me"]
 
   spec.summary = "Circular, Infinite Arrays in Ruby"
@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/braindeaf/ouroboros"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/braindeaf/ouroboros"
