@@ -1,6 +1,5 @@
 module Ouroboros
   class Array
-
     attr_reader :store
 
     def initialize(args = [])
@@ -19,7 +18,7 @@ module Ouroboros
       in ::Array[Integer => start, Integer => length]
         base = store.rotate(start % store.size)
         times, remainder = length.divmod(store.size)
-        Array.new([*(base * times), *base[0, remainder]])
+        self.class.new([*(base * times), *base[0, remainder]])
 
       in ::Array[Integer => index]
         at(index)
@@ -43,7 +42,7 @@ module Ouroboros
       store.send(m, *args, &block).then { |o| o.is_a?(::Array) ? Array.new(o) : o }
     end
 
-    def respond_to_missing?(m, include_private=false)
+    def respond_to_missing?(m, include_private = false)
       data.respond_to?(m, include_private)
     end
   end

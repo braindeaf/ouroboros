@@ -4,11 +4,11 @@ RSpec.describe Ouroboros::Array do
   it "has a version number" do
     expect(Ouroboros::VERSION).not_to be nil
   end
-  
+
   subject(:array) { [1, 2, 3, 4, 5].to_ouroboros }
-  
-  describe '#at' do
-    it 'returns the value at a position as if it were circular' do
+
+  describe "#at" do
+    it "returns the value at a position as if it were circular" do
       expect(array[0]).to eq(1)
       expect(array[5]).to eq(1)
       expect(array[1]).to eq(2)
@@ -18,7 +18,7 @@ RSpec.describe Ouroboros::Array do
     end
   end
 
-  describe "#[]" do  
+  describe "#[]" do
     context "#[index]" do
       it "returns value as if the array was circular" do
         expect(array[0]).to eq(1)
@@ -31,7 +31,7 @@ RSpec.describe Ouroboros::Array do
     end
 
     context "#[start, length]" do
-      it 'returns an Ouroboros::Array' do
+      it "returns an Ouroboros::Array" do
         expect(array[0..1]).to be_an(Ouroboros::Array)
       end
 
@@ -48,7 +48,7 @@ RSpec.describe Ouroboros::Array do
     end
 
     context "#[range]" do
-      it 'returns an Ouroboros::Array' do
+      it "returns an Ouroboros::Array" do
         expect(array[0..1]).to be_an(Ouroboros::Array)
       end
 
@@ -66,8 +66,8 @@ RSpec.describe Ouroboros::Array do
     end
   end
 
-  describe '#method_missing' do
-    it 'proxies all remaining method calls on the array object' do
+  describe "#method_missing" do
+    it "proxies all remaining method calls on the array object" do
       expect(array.rotate(2)).to eq([3, 4, 5, 1, 2])
     end
   end
