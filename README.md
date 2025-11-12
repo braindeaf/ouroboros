@@ -3,6 +3,7 @@
 Ouroboros is an experimental implementation of an infinite circular Array. An Array eating it's own tail. 
 
 [![Gem Version](https://badge.fury.io/rb/ouroboros.svg)](https://badge.fury.io/rb/ouroboros)
+[![Ruby](https://github.com/braindeaf/ouroboros/actions/workflows/ruby.yml/badge.svg)](https://github.com/braindeaf/ouroboros/actions/workflows/ruby.yml)
 
 ## Installation
 
