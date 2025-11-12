@@ -2,6 +2,8 @@
 
 Ouroboros is an experimental implementation of an infinite circular Array. An Array eating it's own tail. 
 
+[![Gem Version](https://badge.fury.io/rb/ouroboros.svg)](https://badge.fury.io/rb/ouroboros)
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
